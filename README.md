@@ -35,7 +35,9 @@ architectures. You can do this by chaning the target,
 
 4. Configure
 
-        CPPFLAGS="-I/Users/sirack/Desktop/yara/headers/" LDFLAGS="-L/Users/sirack/Desktop/yara/openssl_libs/x86_64" ./configure --host $TARGET --enable-static --disable-shared --with-crypto --enable-dex
+        CPPFLAGS="-I/Users/<user_name>/Desktop/yara/headers/" LDFLAGS="-L/Users/<user_name>/Desktop/yara/openssl_libs/x86_64" ./configure --host $TARGET --enable-static --disable-shared --with-crypto --enable-dex
+
+        The flags should point to the dir where openssl headers and libs are located
 
 5. Make
         
