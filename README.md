@@ -1,12 +1,11 @@
 # Yara For Arm (Android)
 
-If you need prebuilt version of yara, check `prebuilt` directory
+If you need prebuilt version of yara, check `prebuilt` directory. It contains both cli executables
+and static libary
 
 # Compile
 
-This instruction outlines how to compile yara for ARM. Specifically, for Android. We are going to start with 
-arm8. You can repeat the below steps for the remaining
-architectures. You can do this by chaning the target, 
+This instruction outlines how to compile yara for ARM. Specifically, for Android. The below instruction were done on OSX. We are going to start with arm8. You can repeat the below steps for the remaining architectures. You can do this by chaning the target, 
     
         export TARGET=aarch64-linux-android (arm8)
         export TARGET=armv7a-linux-androideabi (arm7)
@@ -35,7 +34,7 @@ architectures. You can do this by chaning the target,
 
 4. Configure
 
-        CPPFLAGS="-I/Users/<user_name>/Desktop/yara/headers/" LDFLAGS="-L/Users/<user_name>/Desktop/yara/openssl_libs/x86_64" ./configure --host $TARGET --enable-static --disable-shared --with-crypto --enable-dex
+        CPPFLAGS="-I/Users/<user_name>/Desktop/yara/headers/" LDFLAGS="-L/Users/<user_name>/Desktop/yara/openssl_libs/<abi>" ./configure --host $TARGET --enable-static --disable-shared --with-crypto --enable-dex
 
         The flags should point to the dir where openssl headers and libs are located
 
