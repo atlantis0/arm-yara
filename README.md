@@ -41,9 +41,9 @@ This instruction outlines how to compile yara for ARM. Specifically, for Android
 
 4. Configure. If you want to configure with openssl (--with-crypto) use the second command. The flags should point to the dir where openssl headers and libs are located)
 
-        ./configure --host $TARGET --enable-static --disable-shared --disable-cuckoo --disable-dotnet --enable-dex
+        $ ./configure --host $TARGET --enable-static --disable-shared --disable-cuckoo --disable-dotnet --enable-dex
 
-        CPPFLAGS="-I/Users/sirack/Desktop/arm-yara/headers/" LDFLAGS="-L/Users/sirack/Desktop/arm-yara/openssl_libs/<ABI>" ./configure --host $TARGET --enable-static --disable-shared --disable-cuckoo --disable-dotnet --enable-dex --with-crypto
+        $ CPPFLAGS="-I/Users/sirack/Desktop/arm-yara/headers/" LDFLAGS="-L/Users/sirack/Desktop/arm-yara/openssl_libs/<ABI>" ./configure --host $TARGET --enable-static --disable-shared --disable-cuckoo --disable-dotnet --enable-dex --with-crypto
 
 
 5. Make
