@@ -43,7 +43,7 @@ This instruction outlines how to compile yara for ARM. Specifically, for Android
 
         $ ./configure --host $TARGET --enable-static --disable-shared --disable-cuckoo --disable-dotnet --enable-dex
 
-        $ CPPFLAGS="-I/Users/sirack/Desktop/arm-yara/headers/" LDFLAGS="-L/Users/sirack/Desktop/arm-yara/openssl_libs/<ABI>" ./configure --host $TARGET --enable-static --disable-shared --disable-cuckoo --disable-dotnet --enable-dex --with-crypto
+        $ CPPFLAGS="-I<header_location>/arm-yara/headers/" LDFLAGS="-L<header_location>/arm-yara/openssl_libs/<ABI>" ./configure --host $TARGET --enable-static --disable-shared --disable-cuckoo --disable-dotnet --enable-dex --with-crypto
 
 
 5. Make
